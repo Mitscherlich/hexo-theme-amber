@@ -1,0 +1,86 @@
+/*
+ * Blog name and description
+ */
+.blog-title
+  margin-bottom 0
+  font-size 2rem
+  font-weight 400
+
+.blog-description
+  font-size 1.1rem
+  color #999
+
+@media (min-width: 40em)
+  .blog-title
+    font-size 3.5rem
+
+@import "table"
+
+/*
+ * Blog posts
+ */
+.blog-post
+  margin-bottom 4rem
+
+  & > *:first-child
+    margin-top 0!important
+
+  .blog-post-title
+    margin-bottom .25rem
+    font-size 42px
+
+  .blog-post-meta
+    // margin-bottom 1.25rem
+    color #999
+
+  .blog-post-content
+    @extend .lh-175
+    overflow-x hidden
+
+    h1, h2, h3, h4, h5, h6
+      margin-top 24px
+      margin-bottom 16px
+      font-weight 600
+      line-height 1.25
+
+    p, blockquote, ul, ol, dl, table, pre
+      line-height inherit
+      margin-top 0
+      // margin-bottom 16px
+
+    ol, ul
+      padding-left 28px
+
+    blockquote
+      padding 0 1em
+      color #6a737d
+      border-left 0.25em solid #dfe2e5
+
+    img
+      background-color #fff
+      max-width 100%
+      height auto
+
+    table
+      @extend .table
+
+    p
+      overflow-x auto
+      nobr
+        display inline-block
+
+    input[type='checkbox']
+      pointer-events none
+
+/*
+ * Footer
+ */
+.blog-footer
+  padding 1.2rem 0
+  color #999
+  text-align center
+  background-color #f9f9f9
+  border-top .05rem solid #e5e5e5
+
+.blog-footer p:last-child
+  margin-bottom 0

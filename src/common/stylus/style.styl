@@ -1,0 +1,85 @@
+@import "variables"
+@import "extends"
+
+.display-4
+  font-size 2.5rem
+
+@media mq-normal
+  .display-4
+    font-size 3rem
+
+/* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header
+  flex 1
+  line-height 1
+  border-bottom 1px solid #e5e5e5
+
+.blog-header-logo
+  font-family "Playfair Display", Georgia, "Times New Roman", serif
+  font-size 2.25rem
+
+.blog-header-logo:hover
+  text-decoration none
+
+.card-img-right
+  height 100%
+  border-radius 0 3px 3px 0
+
+.flex-auto
+  -ms-flex 0 0 auto
+  -webkit-box-flex 0
+  flex 0 0 auto
+
+.h-250
+  height 250px
+
+@media mq-normal
+  .h-md-250
+    height 250px
+
+.border-top
+  border-top 1px solid #e5e5e5
+.border-bottom
+  border-bottom 1px solid #e5e5e5
+
+.box-shadow
+  box-shadow 0 .25rem .75rem rgba(0, 0, 0, .05)
+
+.card
+  transition 0.2s all ease-in-out
+
+.card:hover
+  @extend .box-shadow
+
+.cursor-pointer
+  cursor pointer
+
+.heimu, .heimu a, a .heimu, .heimu a.new
+  background-color #252525
+  color #252525
+  text-shadow none
+
+.heimu:hover, .heimu:active, .heimu.off
+  transition color .13s linear
+  color white
+
+.text-overflow
+  min-height 2.2rem
+  max-width 30rem
+  display block
+  overflow hidden
+  text-overflow ellipsis
+
+@media screen and (min-width: 480px) and (max-width: 769px)
+  .text-overflow
+    word-break keep-all
+    white-space nowrap
+
+@import "partial/fonts"
+@import "partial/navbar"
+@import "partial/nprogress"
+@import "partial/post"
+@import "partial/project"
+@import "partial/highlight"
+@import "partial/sidebar"

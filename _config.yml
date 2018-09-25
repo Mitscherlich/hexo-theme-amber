@@ -1,0 +1,87 @@
+# Navbar menus
+menu_icon: false
+menu:
+  home: /
+  archives: /archives
+  categories: /categories
+  # Custom Menu
+  # '/index' can be omitted
+  # please add '/pages' as prefix
+  # example:
+  # [X]  About: /about/index       (need '/pages' as prefix)
+  # [O]  About: /pages/about/index (preferred)
+  # [O]  About: /pages/about
+  # about: /about
+# RSS support
+# need hexo-generator-feed: https://github.com/hexojs/hexo-generator-feed#readme
+# rss: /api/atom.xml
+
+leaf: Describe your blog. *Markdown* supported.
+
+# Sidebar
+# Support font-awesome icon: specific solid type icons
+# Usage: https://fontawesome.com/icons?d=gallery&s=solid&m=free
+sidebar:
+  fixed:
+    leaf:
+      only: index   # only display on home page
+    tag_cloud: TagCloud
+    elsewhere:
+      only: index
+  sticky:
+    github: Github  # use TitleCase for dynamic components
+
+# Miscelaneous
+social_icon: true
+# Support font-awesome icon: specific brand type icons
+# Usage: https://fontawesome.com/icons?d=gallery&s=brands&m=free
+# Everything you can find a brands icon of font-awesome is ok.
+social:
+  # facebook:
+  #   link: ...
+  #   icon: facebook
+  # github:
+  #   link: ...
+  #   icon: github-alt
+  # twitter:
+  #   link: ...
+  #   icon: twitter
+  # wechat:
+  #   link: ...
+  #   icon: wexin
+  # weibo:
+  #   link: ...
+  #   icon: weibo
+  # qq:
+  #   link: ...
+  #   icon: qq
+  # zhihu:
+  #   link: ...
+  #   icon: zhihu
+
+# Search
+# search: false # false for disable search
+
+# ---------------------------------------------------------------
+# Third Party Services Settings
+# ---------------------------------------------------------------
+
+# MathJax Support
+mathjax: true # false for disable mathjax
+              # you can specific your mathjax cdn here
+
+# Gitalk
+# Usage: https://github.com/gitalk/gitalk#usage
+gitalk:
+  enable: false # true for enable gitlak
+  # owner: ...
+  # admin:
+  #   - ...
+  # repo: ...
+  # client_id: ...
+  # client_secret: ...
+  # lazy: false
+
+poowered_by:
+  author: Mitscherlich
+  link: https://mitscherlich.me
