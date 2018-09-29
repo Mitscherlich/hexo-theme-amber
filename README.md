@@ -1,8 +1,10 @@
-# hexo-theme-amber
+# Amber
 
 [![Build Status](https://travis-ci.org/Mitscherlich/hexo-theme-amber.svg?branch=master)](https://travis-ci.org/Mitscherlich/hexo-theme-amber)
 
 Hexo theme based on Vue.js and Bootstrap for [mitscherlich.me](https://mitscherlich.me).
+
+![Preview](docs/assets/Preview.png)
 
 > **⚠️ Note:** This theme cannot be use as a individual Vue.js spa. You need to setup a Hexo blog.
 
@@ -36,7 +38,7 @@ Just follow the installation, but notice that you have to run both `hexo serve` 
 
 ```bash
 $ cd /path/to/blog/theme/amber
-$ yarn dev
+$ yarn serve
 ```
 
 Then open another terminal:

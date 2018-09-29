@@ -1,6 +1,8 @@
-# hexo-theme-amber
+# Amber
 
 [![Build Status](https://travis-ci.org/Mitscherlich/hexo-theme-amber.svg?branch=master)](https://travis-ci.org/Mitscherlich/hexo-theme-amber)
+
+![Preview](docs/assets/Preview.png)
 
 Hexo 博客主题 for [mitscherlich.me](https://mitscherlich.me).
 
@@ -36,7 +38,7 @@ $ hexo clean && hexo serve
 
 ```bash
 $ cd /path/to/blog/theme/amber
-$ yarn dev
+$ yarn serve
 ```
 
 再打开一个终端:

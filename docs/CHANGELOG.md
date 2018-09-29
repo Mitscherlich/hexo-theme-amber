@@ -10,8 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ ] Custom 404 page
 - [ ] Custom layout
 - [x] Google Analytics
-- [ ] Fancybox support
+- [x] Fancybox support
 - [ ] More comment system
+- [ ] Collapsible sidebar
 
 #### [v0.0.0-rc.0] - 2018-9-24
 
