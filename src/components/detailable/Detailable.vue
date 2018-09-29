@@ -27,7 +27,7 @@
         <!-- post category -->
         <span class="post-meta post-meta-author" v-if="lastCategory.length">
           <b-btn
-            class="post-meta-tag mr-1 text-muted"
+            class="post-meta-tag text-muted mr-1 mb-1"
             size="sm" variant="light"
             @click="$router.push({ name: 'related-posts-page', params: { type: 'category', slug: lastCategory } })">
             <fa-icon icon="hashtag" />

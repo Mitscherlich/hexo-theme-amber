@@ -52,6 +52,33 @@ export default Vue.extend({
 @import "~@/common/stylus/variables"
 
 #gitalk-container
+  .gt-container
+    button.gt-btn
+      transition all .2s
+      border-radius .25rem
+      &.gt-btn-login
+        border-color color-primary
+        background-color color-white
+        color color-primary
+        &:hover
+          color color-light
+          background-color color-primary
+      &.git-btn-public
+        border-color color-primary
+        background-color color-primary
+        color color-light
+        &:hover
+          border-color color-primary-d
+          background-color color-primary-d
+      &.gt-btn-preview
+        border-color color-success
+        color color-success
+        &:hover
+          color color-light
+          background-color color-success
+  .gt-no-init
+    a
+      color color-primary
   .gt-meta
     *
       color color-dark
@@ -67,21 +94,4 @@ export default Vue.extend({
       .gt-header-controls
         .gt-header-controls-tip
           color color-muted
-        button.gt-btn
-          transition all .2s
-          border-radius .25rem
-          &.gt-btn-login
-            border-color color-primary
-            background-color color-white
-            color color-primary
-            &:hover
-              color color-light
-              background-color color-primary
-          &.gt-btn-preview
-            border-color color-success
-            color color-success
-            &:hover
-              color color-light
-              background-color color-success
 </style>
-

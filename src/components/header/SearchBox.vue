@@ -27,25 +27,27 @@
         </b-input-group>
 
         <!-- search suggestions -->
-        <b-card no-body
-          class="suggestions border border-dark box-shadow"
-          v-if="showSuggestions">
-          <h5 class="font-italic" slot="header">{{ $t('result') }}</h5>
-          <b-list-group flush
-            @mouseleave="unfocus">
-            <b-list-group-item
-              v-for="(s, i) in suggestions"
-              class="suggestion"
-              :class="{ focused: i === focusIndex }"
-              :key="`suggestion-${i}`"
-              @mousedown="go(i)"
-              @mouseenter="focus(i)">
-              <b-link :to="{ name: 'post-page', params: { slug: s.slug }}" @click.prevent>
-                {{ s.title }}
-              </b-link>
-            </b-list-group-item>
-          </b-list-group>
-        </b-card>
+        <transition name="fade">
+          <b-card no-body
+            class="suggestions border border-dark box-shadow"
+            v-if="showSuggestions">
+            <h5 class="font-italic" slot="header">{{ $t('result') }}</h5>
+            <b-list-group flush
+              @mouseleave="unfocus">
+              <b-list-group-item
+                v-for="(s, i) in suggestions"
+                class="suggestion"
+                :class="{ focused: i === focusIndex }"
+                :key="`suggestion-${i}`"
+                @mousedown="go(i)"
+                @mouseenter="focus(i)">
+                <b-link :to="{ name: 'post-page', params: { slug: s.slug }}" @click.prevent>
+                  {{ s.title }}
+                </b-link>
+              </b-list-group-item>
+            </b-list-group>
+          </b-card>
+        </transition>
       </b-form>
   </transition>
 </template>
@@ -158,13 +160,15 @@ export default class SearchBox extends Vue {
   width 20rem
   z-index 99
   .suggestion
+    transition all .1s
     line-height 1.4
     cursor pointer
     a
       text-decoration none
       color color-dark
     &.focused
-      background-color color-info
+      background-color color-primary
+      opacity .8
       a
         color color-light
 </style>

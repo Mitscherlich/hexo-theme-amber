@@ -17,15 +17,15 @@
         </span>
         <!-- post tags -->
         <span class="post-meta post-meta-tags">
-          <b-button
-            class="post-meta-tag mr-1 text-muted"
+          <b-btn
+            class="post-meta-tag text-muted mr-1 mb-1"
             size="sm" variant="light"
             v-for="tag in post.tags"
             :key="`post-meta-tag-${tag.slug}`"
             @click="onTagTapped(tag)">
             <fa-icon icon="tag" />
             {{ tag.name }}
-          </b-button>
+          </b-btn>
         </span>
       </small>
     </header>

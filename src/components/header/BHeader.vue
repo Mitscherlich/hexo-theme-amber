@@ -5,9 +5,9 @@
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="header-action col d-md-none d-lg-none">
           <transition name="fade" mode="out-in">
-            <b-button class="btn-back mr-2" variant="light" v-show="!isHome()" @click="$router.push('/')">
+            <b-btn class="btn-back mr-2" variant="light" v-show="!isHome()" @click="$router.go(-1)">
               <fa-icon icon="angle-left" />
-            </b-button>
+            </b-btn>
           </transition>
         </div>
         <div class="header-breadcurmb col pt-1 d-none d-md-block d-lg-block">
