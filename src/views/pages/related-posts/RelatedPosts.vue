@@ -7,9 +7,9 @@
       </h4>
       <b-input-group>
         <b-input-group-text slot="prepend">
-          <fa-icon v-if="type == 'tag'" class="text-muted" icon="tags" />
-          <fa-icon v-else-if="type == 'category'" class="text-muted" icon="bookmark" />
-          <fa-icon v-else class="text-muted" icon="book" />
+          <i v-if="type == 'tag'" class="fas fa-tags text-muted"></i>
+          <i v-else-if="type == 'category'" class="fas fa-bookmark text-muted"></i>
+          <i v-else class="fas fa-book text-muted"></i>
         </b-input-group-text>
         <b-form-input
           type="text"
@@ -41,7 +41,7 @@
             {{ p.text }}
           </p>
           <small class="text-muted">
-            <fa-icon icon="user-edit" />
+            <i class="fas fa-user-edit"></i>
             {{ p.author || $site.author }}
           </small>
         </b-list-group-item>

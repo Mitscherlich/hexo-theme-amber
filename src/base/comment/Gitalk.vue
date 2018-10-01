@@ -63,7 +63,7 @@ export default Vue.extend({
         &:hover
           color color-light
           background-color color-primary
-      &.git-btn-public
+      &.gt-btn-public
         border-color color-primary
         background-color color-primary
         color color-light

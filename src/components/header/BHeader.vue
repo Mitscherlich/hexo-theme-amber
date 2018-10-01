@@ -6,13 +6,13 @@
         <div class="header-action col d-md-none d-lg-none">
           <transition name="fade" mode="out-in">
             <b-btn class="btn-back mr-2" variant="light" v-show="!isHome()" @click="$router.go(-1)">
-              <fa-icon icon="angle-left" />
+              <i class="fas fa-angle-left"></i>
             </b-btn>
           </transition>
         </div>
         <div class="header-breadcurmb col pt-1 d-none d-md-block d-lg-block">
           <a v-if="$theme.rss !== false" class="text-muted cursor-pointer mr-2" :href="$theme.rss">
-            <fa-icon icon="rss" />
+            <i class="fas fa-rss"></i>
             {{ $t('subscribe') }}
           </a>
         </div>

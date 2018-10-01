@@ -89,5 +89,4 @@ export default class Layout extends Vue {
 }
 </script>
 
-<style src="bootstrap-vue/dist/bootstrap-vue.css"></style>
 <style src="@/common/stylus/style.styl" lang="stylus"></style>

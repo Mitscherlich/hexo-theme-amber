@@ -7,7 +7,7 @@
       </h4>
       <b-input-group>
         <b-input-group-text slot="prepend">
-          <fa-icon class="text-muted" icon="bookmark" />
+          <i class="fas fa-bookmark text-muted"></i>
         </b-input-group-text>
         <b-form-input
           type="text"

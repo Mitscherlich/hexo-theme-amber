@@ -7,12 +7,12 @@
       <small class="blog-post-meta text-muted">
         <!-- post date -->
         <span class="post-meta post-meta-date">
-          <fa-icon icon="calendar" />
+          <i class="fas fa-calendar"></i>
           {{ $moment(post.date).format(format) }}
         </span>
         <!-- post author -->
         <span class="post-meta post-meta-author">
-          <fa-icon icon="user-edit" />
+          <i class="fas fa-user-edit"></i>
           {{ post.author || $site.author }}
         </span>
         <!-- post tags -->
@@ -23,7 +23,7 @@
             v-for="tag in post.tags"
             :key="`post-meta-tag-${tag.slug}`"
             @click="onTagTapped(tag)">
-            <fa-icon icon="tag" />
+            <i class="fas fa-tag"></i>
             {{ tag.name }}
           </b-btn>
         </span>

@@ -4,13 +4,11 @@ import router from './router';
 import store from './store';
 import './registerServiceWorker';
 
-// import { FETCH_META, LOAD_GOOGLE_ANALYTICS } from './store/types';
-
 // enhance app
 import './enhanceApp';
 
 // import i18n messages
-import { messages } from './enhancer/i18n';
+import { messages } from './enhancers/i18n';
 
 // vue-i18n instance must be initialized after `VueI18n` is loaded
 // eslint-disable-next-line
@@ -38,7 +36,7 @@ const app = new Vue({
 
 declare const window: Window;
 
-import { FETCH_META } from '@/store/types';
+import { FETCH_META, LOAD_GOOGLE_ANALYTICS } from '@/store/types';
 
 router.onReady(async () => {
   router.beforeResolve(async (to, from, next) => {
@@ -73,7 +71,7 @@ router.onReady(async () => {
   await store.dispatch(`meta/${FETCH_META}`);
 
   // google analytics
-  // await store.dispatch(`meta/${LOAD_GOOGLE_ANALYTICS}`, { router })
+  await store.dispatch(`meta/${LOAD_GOOGLE_ANALYTICS}`, { router });
 
   // Fetch initial state
   const initMatched = router.getMatchedComponents(router.currentRoute);

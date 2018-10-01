@@ -9,18 +9,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [ ] Custom 404 page
 - [ ] Custom layout
-- [x] Google Analytics
-- [x] Fancybox support
 - [ ] More comment system
 - [ ] Collapsible sidebar
 
-#### [v0.0.0-rc.0] - 2018-9-24
+#### [v0.0.0-rc.1] - 2018-10-01
+
+- Significantly reduced packaged volume: up to **50%**
+- Add Google Analytics support
+- Add Fancybox support
+
+#### [v0.0.0-rc.0] - 2018-09-24
 
 - **Refacting with Vue.js**
 - **Refacting TypeScript**
 - **Add Hexo data directory support**
 - **Add search feature**
 - Add sitemap
-- Add rss support
+- Add atom/RSS support
 - Add multiple kinds of widgets: *TagCloud*, *GithubCard*, etc.
 - Add internalize (i18n) support

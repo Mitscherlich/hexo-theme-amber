@@ -6,7 +6,7 @@
         v-for="nav in navs"
         :to="{ path: nav.link }"
         :key="`nav-${nav.text}`">
-        <fa-icon v-if="nav.icon" :icon="['fas', nav.icon]" class="mr-2" />
+        <i v-if="nav.icon" :class="['fas', `fa-${nav.icon}`]" class="mr-2"></i>
         {{ nav.text.toTitleCase() }}
       </router-link>
     </div>

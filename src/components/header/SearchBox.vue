@@ -1,10 +1,9 @@
 <template>
   <transition name="fade" mode="out-in">
-    <fa-icon
-      class="text-muted cursor-pointer"
-      icon="search"
+    <i
+      class="text-muted cursor-pointer fas fa-search"
       v-if="!showSearchBox"
-      @click="showSearchBox = !showSearchBox" />
+      @click="showSearchBox = !showSearchBox"></i>
     <b-form
       @submit.prevent
       v-if="showSearchBox">

@@ -13,7 +13,6 @@
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
 import { Tag } from '@/models/post';
-import 'TagCloud/dist/tagcloud.js';
 
 declare interface ITagCloudConfig {
   fontsize?: number;
@@ -51,5 +50,3 @@ export default class TagCloud extends Vue {
   }
 }
 </script>
-
-<style src="TagCloud/dist/tagcloud.css"></style>

@@ -4,7 +4,9 @@ import { HexoConfig } from '@/models/hexo';
 import { Theme } from '@/models/theme';
 import { FETCH_META, RELOAD_META, SHOULD_PAGINATION, LOAD_GOOGLE_ANALYTICS } from '@/store/types';
 import { RootState } from '@/store';
-// import VueRouter from 'vue-router';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import GoogleAnalytics from '@/enhancers/analytics';
 
 /* tslint:disable:max-classes-per-file */
 
@@ -28,14 +30,14 @@ const actions: ActionTree<MetaState, RootState> = {
     const { data } = await fetchHexoConfig();
     commit(RELOAD_META, Object.assign({}, data, { siteData: siteData.data }));
   },
-  // /* tslint:disable:no-shadowed-variable */
-  // async [LOAD_GOOGLE_ANALYTICS]({ state }, { router }: { router: VueRouter }) {
-  //   const google_analytics = state.themeConfig.google_analytics
-  //   if (google_analytics.enable) {
-  //     const track_id = google_analytics.track_id
-  //     Vue.use(installGoogleAnalytics, { router, track_id })
-  //   }
-  // }
+  /* tslint:disable:no-shadowed-variable */
+  async [LOAD_GOOGLE_ANALYTICS]({ state }, { router }: { router: VueRouter }) {
+    const google_analytics = state.themeConfig.google_analytics;
+    if (google_analytics.enable) {
+      const track_id = google_analytics.track_id;
+      Vue.use(GoogleAnalytics, { router, track_id });
+    }
+  },
 };
 
 const mutations: MutationTree<MetaState> = {

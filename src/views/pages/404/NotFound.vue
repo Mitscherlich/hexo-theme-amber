@@ -3,8 +3,8 @@
     <!-- header -->
     <h4 class="pb-3 mt-0 mb-4 font-italic border-bottom">
       <b-button class="mr-2" variant="light" @click="$router.back()">
-          <fa-icon class="mx-1" icon="angle-left" />
-        </b-button>
+        <i class="fas fa-angle-left mx-1"></i>
+      </b-button>
       <span class="align-middle">{{ $t('not_found') }}</span>
     </h4>
     <!-- 404 image -->

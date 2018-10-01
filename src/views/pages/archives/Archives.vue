@@ -4,7 +4,7 @@
     <h4 class="pb-3 mt-0 mb-4 font-italic border-bottom">
       <transition name="fade">
         <b-button class="mr-2" variant="light" v-show="page !== 1" @click="onPage(1)">
-          <fa-icon class="mx-1" icon="angle-left" />
+          <i class="fas fa-angle-left mx-1"></i>
         </b-button>
       </transition>
       <span class="align-middle">{{ $t('archives') }}</span>
@@ -14,7 +14,7 @@
       <div class="timeline card mb-5 p-3 border-0" v-for="key of timeLines.keys" :key="`timeline-key-${key}`">
         <!-- leading -->
         <div class="leading mb-3">
-          <fa-icon icon="clock" />
+          <i class="fas fa-clock"></i>
           <span>{{ $moment(key).format('MMM. YYYY') }}</span>
         </div>
         <b-row class="mb-3 d-flex justify-content-between" v-for="one of timeLines.entities[key]" :key="'title-' + one.slug">

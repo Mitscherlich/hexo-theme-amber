@@ -44,7 +44,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { ISidebarItemConfig } from '@/models/theme';
-import ArrayUtil from '@/enhancer/utils/ArrayUtil';
+import ArrayUtil from '@/enhancers/utils/ArrayUtil';
 
 @Component
 export default class BSidebar extends Vue {

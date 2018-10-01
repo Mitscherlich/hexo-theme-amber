@@ -7,7 +7,7 @@
           class="blog-post-title text-dark"
           v-if="!isImplicit && target.link && target.link.length">
           <span>{{ $t(target.title || 'untitled') }}</span>
-          <fa-icon icon="link" aria-hidden="true" />
+          <i class="fas fa-link"></i>
         </a>
         <span v-else>{{ $t(target.title || 'untitled') }}</span>
       </h2>
@@ -16,12 +16,12 @@
       <small class="blog-post-meta">
         <!-- post date -->
         <span class="post-meta post-meta-date">
-          <fa-icon icon="calendar" />
+          <i class="fas fa-calendar"></i>
           {{ target.date | date('ll') }}
         </span>
         <!-- post author -->
         <span class="post-meta post-meta-author">
-          <fa-icon icon="user-edit" />
+          <i class="fas fa-user-edit"></i>
           {{ target.author || $site.author }}
         </span>
         <!-- post category -->
@@ -30,7 +30,7 @@
             class="post-meta-tag text-muted mr-1 mb-1"
             size="sm" variant="light"
             @click="$router.push({ name: 'related-posts-page', params: { type: 'category', slug: lastCategory } })">
-            <fa-icon icon="hashtag" />
+            <i class="fas fa-hashtag"></i>
             {{ lastCategory.toTitleCase() }}
           </b-btn>
         </span>
@@ -42,7 +42,7 @@
             v-for="tag in target.tags"
             :key="`post-meta-tag-${tag.slug}`"
             @click="$router.push({ name: 'related-posts-page', params: { type: 'tag', slug: tag.slug } })">
-            <fa-icon icon="tag" />
+            <i class="fas fa-tag"></i>
             {{ tag.name }}
           </b-btn>
         </span>
