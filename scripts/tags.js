@@ -14,7 +14,7 @@ hexo.extend.tag.register('fancybox', function (args) {
   let thumbnail = '',
     tagClass = '';
 
-  const tpl = config => `<a data-fancybox="gallery" href="${config.path}" title="${config.title}"><img class="${config.tagClass}" src="${config.path}" alt="${config.title}"></a>`
+  const tpl = config => `<p><a data-fancybox="gallery" href="${config.path}" title="${config.title}"><img class="${config.tagClass}" src="${config.path}" alt="${config.title}"></a></p>`
 
   if (args.length && rUrl.test(args[0])) {
     thumbnail = args.shift();

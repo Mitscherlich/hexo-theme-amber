@@ -1,4 +1,4 @@
-declare module 'gitalk';
+declare module 'vue-script2';
 
 declare module 'vue-analytics' {
   const content: any;

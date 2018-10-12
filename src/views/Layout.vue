@@ -9,7 +9,7 @@
         <div class="row">
           <!-- .blog-main -->
           <transition name="fade">
-            <div class="blog-main" :class="[ showSidebar ? 'col-md-8' : 'col' ]">
+            <div class="blog-main" :class="[ showSidebar ? 'col-lg-8' : 'col' ]">
               <!-- content -->
                 <transition name="fade" mode="out-in">
                   <keep-alive>
@@ -23,9 +23,9 @@
           <transition name="fade">
             <b-sidebar
               id="wp-sidebar"
-              class="blog-sidebar col-md-4"
+              class="blog-sidebar col-lg-4"
               v-if="showSidebar"
-              :sidebar="this.$theme.sidebar" />
+              :sidebar="$theme.sidebar" />
           </transition>
         </div>
       </div>

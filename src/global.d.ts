@@ -8,6 +8,9 @@ declare interface Array<T> {
 
 declare interface Window {
   MathJax: any;
+  Runner: any;
+  adsbygoogle: any;
+  loadTimeData: any;
   sidebar: any;
   tagcloud: (config?: any) => any;
 }
@@ -18,3 +21,5 @@ declare interface External {
   // else
   addFavorite(url?: string, title?: string): any;
 }
+
+declare module 'gitalk';
