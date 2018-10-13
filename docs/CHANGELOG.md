@@ -12,11 +12,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ ] More comment system
 - [ ] Collapsible sidebar
 
+#### [v0.0.0-rc.3] - 2018-10-13
+
+- Fix build issue when generate blank articles ([#10](https://github.com/Mitscherlich/mitscherlich.me/issues/10#issuecomment-429293447))
+- **Add Traditional Chinese Support**
+- Update comment preview style
+- Update manifest settings
+
+#### [v0.0.0-rc.2] - 2018-10-12
+
+- **Transplant Chrome dino runner game on page 404**
+
 #### [v0.0.0-rc.1] - 2018-10-01
 
 - Significantly reduced packaged volume: up to **50%**
-- Add Google Analytics support
-- Add Fancybox support
+- **Add Google Analytics support**
+- **Add Fancybox support**
 
 #### [v0.0.0-rc.0] - 2018-09-24
 
