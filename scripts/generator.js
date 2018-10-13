@@ -15,7 +15,7 @@ function filterHTMLTags(str) {
   return str ? str
     .replace(/\<(?!img|br).*?\>/g, '')
     .replace(/\r?\n|\r/g, '')
-    .replace(/<img(.*)>/g, ' [Figure] ') : null
+    .replace(/<img(.*)>/g, ' [Figure] ') : ''
 }
 
 const attributes = [
