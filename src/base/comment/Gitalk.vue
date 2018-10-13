@@ -88,10 +88,25 @@ export default Vue.extend({
     .gt-header-comment
       textarea.gt-header-textarea
         color color-dark
-        background-color color-white
+        background-color white
         border-color #ced4da
         border-radius .25rem
       .gt-header-controls
         .gt-header-controls-tip
           color color-muted
+      .gt-header-preview
+        min-height 5rem
+        background white
+  .gt-comment
+    color color-dark
+    a
+      color color-primary
+    .gt-comment-content
+      border 1px solid color-light
+      border-radius .25rem
+      background-color white
+  .gt-comment-admin
+    .gt-comment-content
+      border 1px solid lighten(color-primary, 80%)
+      background-color lighten(color-primary, 95%)
 </style>

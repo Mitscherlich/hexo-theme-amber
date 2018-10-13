@@ -10,7 +10,7 @@
     <h4 class="mb-3"><strong>{{ $t('instrument') }}</strong>:</h4>
     <p><strong>{{ $t('start') }}</strong>:&nbsp;<kbd>{{ $t('space') }}</kbd></p>
     <p><strong>{{ $t('jump') }}</strong>:&nbsp;<kbd>{{ $t('space') }}</kbd>&nbsp;/&nbsp;<kbd>{{ $t('key_up') }}</kbd></p>
-    <p><strong>{{ $t('squat') }}</strong>:&nbsp;<kbd>{{ $t('key_down') }}</kbd></p>
+    <p><strong>{{ $t('duck') }}</strong>:&nbsp;<kbd>{{ $t('key_down') }}</kbd></p>
     <div id="main-frame-error" class="interstitial-wrapper" style="margin: 0 auto;">
       <div id="main-content">
         <div class="icon icon-offline" style="visibility: hidden;"></div>

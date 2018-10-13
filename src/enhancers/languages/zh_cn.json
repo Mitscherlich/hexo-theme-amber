@@ -26,6 +26,7 @@
   "add_favorite_failed_msg": "您的浏览器不支持此操作, 请按 Ctrl+D 手动收藏!",
   "back": "返回",
   "back_top": "回到顶部",
+  "duck": "下蹲",
   "education": "教育经历",
   "experience": "工作经历",
   "instrument": "指南",
@@ -36,7 +37,6 @@
   "read_more": "阅读更多",
   "skills": "工作技能",
   "start": "开始游戏",
-  "squat": "下蹲",
   "result": "结果：",
   "no_excerpt": "没有摘要",
   "no_posts": "暂无文章数据",
@@ -56,6 +56,7 @@
   "weixin": "微信",
   "zhihu": "知乎",
 
-  "en_us": "英语",
-  "zh_cn": "中文 (简体)"
+  "en_us": "English",
+  "zh_cn": "中文 (简体)",
+  "zh_hs": "中文 (正體)"
 }

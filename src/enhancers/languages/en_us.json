@@ -26,6 +26,7 @@
   "add_favorite_failed_msg": "Please use 'Ctrl + D' to add manually!",
   "back": "Go back",
   "back_top": "Back Top",
+  "duck": "Duck",
   "education": "Education",
   "experience": "Experience",
   "instrument": "Instrument",
@@ -37,7 +38,6 @@
   "result": "Result:",
   "skills": "Skills",
   "start": "Start",
-  "squat": "Squat",
   "no_excerpt": "No excerpt",
   "no_posts": "No posts",
   "no_tags": "No tags",
@@ -57,5 +57,6 @@
   "zhihu": "Zhihu",
 
   "en_us": "English",
-  "zh_cn": "Simplified Chinese"
+  "zh_cn": "中文 (简体)",
+  "zh_hs": "中文 (正體)"
 }
