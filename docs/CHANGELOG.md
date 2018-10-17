@@ -5,16 +5,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
 ### Changed
+
+### TODO
 
 - [ ] Custom 404 page
 - [ ] Custom layout
 - [ ] More comment system
 - [ ] Collapsible sidebar
 
+#### [v0.0.0-rc.4] - 2018-10-17
+
+- Reduced packaged size
+
 #### [v0.0.0-rc.3] - 2018-10-13
 
-- Fix build issue when generate blank articles ([#10](https://github.com/Mitscherlich/mitscherlich.me/issues/10#issuecomment-429293447))
+- Fix build issue when generate blank articles ([#10](https://github.com/Mitscherlich/mitscherlich.me/issues/10))
 - **Add Traditional Chinese Support**
 - Update comment preview style
 - Update manifest settings
@@ -25,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### [v0.0.0-rc.1] - 2018-10-01
 
-- Significantly reduced packaged volume: up to **50%**
+- Significantly reduced packaged size: up to **50%**
 - **Add Google Analytics support**
 - **Add Fancybox support**
 
