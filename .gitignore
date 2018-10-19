@@ -21,3 +21,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# yarn lockfile
+yarn.lock
+
+# npm lockfile
+package-lock.json
