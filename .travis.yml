@@ -10,6 +10,16 @@ cache:
   yarn: true
   directories:
     - node_modules
+    - test/node_modules
 
 script:
+  # build theme static files
   - yarn install --pure-lockfile
+  # copy generated files to test folder
+  - cp -R layout test/themes/amber/layout
+  - cp -R source test/themes/amber/source
+  - cp _config.yml test/themes/amber/_config.yml
+  # test generate hexo site
+  - cd test
+  - yarn install --pure-lockfile
+  - npm run build
