@@ -6,15 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
-
 ### TODO
 
-- [ ] Custom 404 page
+- [x] Custom 404 page
 - [ ] Custom layout
 - [ ] More comment system
 - [ ] Collapsible sidebar
 - [ ] TOC support ([#1](https://github.com/Mitscherlich/hexo-theme-amber/issues/1))
+- [ ] Consider providing precompiled packages
+
+#### [v0.0.0-rc.4] - 2018-10-23
+
+- Significantly reduced packaged size: **Reduced to the original quarter!**
+- Refactoring some components to unify style
 
 #### [v0.0.0-rc.4] - 2018-10-17
 

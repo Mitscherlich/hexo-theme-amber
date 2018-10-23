@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-amber",
-  "version": "0.0.0-rc.4",
+  "version": "0.0.0-rc.5",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
