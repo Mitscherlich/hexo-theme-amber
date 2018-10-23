@@ -2,9 +2,9 @@
   <main class="blog-home-layout">
     <h3 class="pb-3 mb-4 font-italic border-bottom">
       <transition name="fade">
-        <b-button class="mr-2" variant="light" v-show="page !== 1" @click="onPage(1)">
+        <b-btn class="mr-2" variant="light" v-show="page !== 1" @click="onPage(1)">
           <i class="fas fa-angle-left mx-1"></i>
-        </b-button>
+        </b-btn>
       </transition>
       <span class="align-middle">EL PSY CONGROO</span>
     </h3>

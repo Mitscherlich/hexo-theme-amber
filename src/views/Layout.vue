@@ -5,18 +5,18 @@
 
     <!-- #wp-body -->
     <main id="wp-body">
-      <div class="container">
-        <div class="row">
+      <b-container>
+        <b-row>
           <!-- .blog-main -->
           <transition name="fade">
-            <div class="blog-main" :class="[ showSidebar ? 'col-lg-8' : 'col' ]">
+            <b-col class="blog-main" :lg="showSidebar?8:12">
               <!-- content -->
                 <transition name="fade" mode="out-in">
                   <keep-alive>
                     <router-view />
                   </keep-alive>
                 </transition>
-            </div>
+            </b-col>
           </transition>
 
           <!-- #wp-sidebar -->
@@ -27,8 +27,8 @@
               v-if="showSidebar"
               :sidebar="$theme.sidebar" />
           </transition>
-        </div>
-      </div>
+        </b-row>
+      </b-container>
     </main>
 
     <!-- #wp-footer -->
@@ -67,12 +67,12 @@ export default class Layout extends Vue {
     console.log('meta fetched');
 
     // define 404 page
-    // const page_404 = store.state.meta.themeConfig.page_404;
+    const page_404 = store.state.meta.themeConfig.page_404;
 
-    // if (page_404.enable) {
-    //   const source = page_404.source_path.replace(/\.md$/, '');
-    //   await store.dispatch(`detailable/${FETCH_DETAILABLE_TARGET}`, { isImplicit: true, sourceOrSlug: source });
-    // }
+    if (page_404.enable) {
+      const source = page_404.source_path.replace(/\.md$/, '');
+      await store.dispatch(`detailable/${FETCH_DETAILABLE_TARGET}`, { isImplicit: true, sourceOrSlug: source });
+    }
   }
 
   private mounted() {

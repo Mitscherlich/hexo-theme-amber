@@ -62,6 +62,19 @@ social:
 # Search
 # search: false # false for disable search
 
+# Custom 404 page
+page_404:
+  # enable to use custom 404 page
+  enable: false
+  # filename of .md file path in your source dir
+  # example:
+  # after run command `hexo new page 404`
+  # [X]  source_path: /404/index            (work dictionry is 'source')
+  # [O]  source_path: 404/index.md
+  # [O]  source_path: 404/index
+  # [O]  source_path: 404                   ('/index' can be omitted)
+  source_path: 404/index.md
+
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
