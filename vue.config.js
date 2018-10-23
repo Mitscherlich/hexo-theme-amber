@@ -24,6 +24,9 @@ module.exports = {
       'vuex': 'Vuex',
       'vue-router': 'VueRouter',
       'bootstrap-vue': 'bootstrapVue',
+      'gitalk': 'Gitalk',
+      'markdown-it': 'markdownit',
+      'moment': 'moment'
     }
   },
   // TODO: Strive to make money for a new computer
