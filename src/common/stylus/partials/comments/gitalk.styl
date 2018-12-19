@@ -1,0 +1,58 @@
+#gitalk-container
+  .gt-container
+    button.gt-btn
+      transition all .2s
+      border-radius .25rem
+      &.gt-btn-login
+        border-color color-primary
+        background-color color-white
+        color color-primary
+        &:hover
+          color color-light
+          background-color color-primary
+      &.gt-btn-public
+        border-color color-primary
+        background-color color-primary
+        color color-light
+        &:hover
+          border-color color-primary-d
+          background-color color-primary-d
+      &.gt-btn-preview
+        border-color color-success
+        color color-success
+        &:hover
+          color color-light
+          background-color color-success
+  .gt-no-init
+    a
+      color color-primary
+  .gt-meta
+    *
+      color color-dark
+  .gt-error
+    color color-danger
+  .gt-header
+    .gt-header-comment
+      textarea.gt-header-textarea
+        color color-dark
+        background-color white
+        border-color #ced4da
+        border-radius .25rem
+      .gt-header-controls
+        .gt-header-controls-tip
+          color color-muted
+      .gt-header-preview
+        min-height 5rem
+        background white
+  .gt-comment
+    color color-dark
+    a
+      color color-primary
+    .gt-comment-content
+      border 1px solid color-light
+      border-radius .25rem
+      background-color white
+  .gt-comment-admin
+    .gt-comment-content
+      border 1px solid lighten(color-primary, 80%)
+      background-color lighten(color-primary, 95%)

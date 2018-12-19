@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
 
 Vue.use(Router);
 
@@ -11,15 +10,41 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home,
+      component: () => import(/* webpackChunkName: "home" */ './pages/home.vue'),
+      meta: { title: 'home', home: true },
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      path: '/archives',
+      name: 'archives',
+      component: () => import(/* webpackChunkName: "archives" */ './pages/archives.vue'),
+      meta: { title: 'archives' },
+    },
+    {
+      path: '/related',
+      name: 'related',
+      component: () => import(/* webpackChunkName: "related" */ './pages/related.vue'),
+      meta: { title: 'search' },
+    },
+    {
+      path: '/articles/:slug',
+      name: 'article',
+      component: () => import(/* webpackChunkName: "articles" */ './pages/articles/_slug.vue'),
+      //  .then((m) => m.createDetailablePage()),
+      meta: { post: true },
+    },
+    {
+      path: '/404',
+      name: '404',
+      component: () => import(/* webpackChunkName: "not-found" */ './pages/404.vue'),
+      meta: {
+        title: 'not_found',
+      },
+    },
+    {
+      path: '/:slug',
+      name: 'page',
+      component: () => import(/* webpackChunkName: "pages" */ './pages/_slug.vue'),
+      meta: { page: true },
     },
   ],
 });
