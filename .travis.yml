@@ -1,0 +1,40 @@
+language: node_js
+sudo: false
+node_js:
+  - "lts/*"
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+install:
+  - yarn install --pure-lockfile
+
+script:
+  - npm run build
+
+after_success:
+  - mkdir dist
+  - cp -R layout dist/layout
+  - cp -R source dist/source
+  - cp -R scripts dist/scripts
+  - cp _config.yml dist/_config.yml
+  - cp README.md dist/README.md
+  - cp README.zh-CN.md dist/README.zh-CN.md
+  - cp LICENSE dist/LICENSE
+
+deploy:
+  provider: pages
+  target-branch: master
+  local-dir: dist
+  skip_cleanup: true
+  keep-history: true
+  committer-from-gh: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: develop
+
+branches:
+  only:
+    - develop
