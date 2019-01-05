@@ -1,10 +1,13 @@
-# Amber
+# hexo-theme-amber
 
 [![Build Status][ci-badge]][ci-url]
+[![juejin][juejin-img]][juejin-url]
 [![MIT License][license-badge]](LICENSE)
 
 [ci-badge]: https://travis-ci.org/Mitscherlich/hexo-theme-amber.svg?branch=develop
 [ci-url]: https://travis-ci.org/Mitscherlich/hexo-theme-amber
+[juejin-img]: https://badge.juejin.im/entry/5c1b515ff265da61193bcc21/likes.svg?style=flat
+[juejin-url]: https://juejin.im/post/5c1b4b69f265da611c26ef7c
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 
 Hexo theme based on Vue.js and Bootstrap for [mitscherlich.me](https://mitscherlich.me).
