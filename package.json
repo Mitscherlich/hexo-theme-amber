@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.10",
@@ -39,18 +40,23 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.7",
     "@types/dplayer": "^1.25.0",
     "@types/katex": "^0.5.0",
     "@types/lodash.merge": "^4.6.4",
     "@types/lodash.pick": "^4.4.4",
     "@types/markdown-it": "^0.0.7",
+    "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.14",
     "@types/nprogress": "^0.0.29",
     "@types/store": "^2.0.1",
     "@vue/cli-plugin-babel": "^3.2.0",
     "@vue/cli-plugin-pwa": "^3.2.0",
     "@vue/cli-plugin-typescript": "^3.2.0",
+    "@vue/cli-plugin-unit-mocha": "^3.2.0",
     "@vue/cli-service": "^3.2.0",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "chai": "^4.2.0",
     "cross-env": "^5.2.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6",
