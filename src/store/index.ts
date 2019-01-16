@@ -56,9 +56,9 @@ export default new Vuex.Store({
       commit(RELOAD_META, Object.assign({ ...siteConfig }, { siteData }));
     },
     async [LOAD_GOOGLE_ANALYTICS]({ state }, { router }: { router: VueRouter }) {
-      const { enable, trackId } = state.themeConfig.ga!;
+      const { enable, track_id } = state.themeConfig.ga!;
       if (enable) {
-        Vue.use(GoogleAnalytics, { router, track_id: trackId });
+        Vue.use(GoogleAnalytics, { router, track_id });
       }
     },
   },
