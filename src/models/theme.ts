@@ -14,7 +14,7 @@ export default class ThemeConfig {
     [key: string]: string|Array<{ text: string; link: string; }>;
   };
   public poweredBy?: { author: string; repo: string; };
-  public ga?: { enable: boolean; trackId: string; };
+  public ga?: { enable: boolean; track_id: string; };
 
   constructor(raw?: any) {
     // tslint:disable:no-string-literal

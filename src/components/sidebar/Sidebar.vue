@@ -2,12 +2,12 @@
   transition(name="fade")
     aside.blog-sidebar.mb-3(v-if="ready")
       //- ads placeholder
-      Leaf(:word="leaf")
-      Elsewhere(:where="social")
-      TagCloud(:tags="tags")
+      Leaf(:word="leaf", v-if="shouldShowLeaf")
+      Elsewhere(:where="social", v-if="shouldShowElsewhere")
+      TagCloud(:tags="tags", v-if="shouldShowTagCloud")
 
       .position-sticky.mb-3(style="top: 1.25rem;")
-        Github(:name="user")
+        Github(:name="user", v-if="shouldShowGithub")
 </template>
 
 <script lang="ts">
@@ -35,7 +35,7 @@ export default class Sidebar extends Vue {
   }
 
   private get user() {
-    return this.themeConfig.sidebar!.github || this.site.author;
+    return this.themeConfig.sidebar!.github || this.site.author || '';
   }
 
   private get social() {
@@ -44,6 +44,35 @@ export default class Sidebar extends Vue {
 
   private get tags() {
     return this.$store.state.tag.tags || [];
+  }
+
+  private get shouldShowLeaf() {
+    return !(
+      !this.leaf ||
+      this.leaf.length < 1
+    );
+  }
+
+  private get shouldShowElsewhere() {
+    return !(
+      Object.is(this.social, {}) ||
+      !(this.social as any).websites ||
+      (this.social as any).websites.length < 1
+    );
+  }
+
+  private get shouldShowTagCloud() {
+    return !(
+      !this.tags ||
+      this.tags.length < 1
+    );
+  }
+
+  private get shouldShowGithub() {
+    return !(
+      !this.user ||
+      this.user.length < 1
+    );
   }
 
   private async beforeMount() {

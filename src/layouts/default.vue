@@ -31,7 +31,7 @@ export default class Default extends Vue {
       return; // ignore this when ssr
     }
     if (this.$route.meta && this.$route.meta.title) {
-      document.title = this.$t(this.$route.meta.title) as string + ' | Amber';
+      document.title = this.$t(this.$route.meta.title) + ' | ' + this.site.title;
     }
   }
 }
