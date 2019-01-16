@@ -47,6 +47,8 @@ export default {
   'untitled': '未命名',
   'visit': '去看看',
   'you_may_want': '你可能想要：',
+  'powered_by_info': '由 <a href="{link}">{author}</a> 傾❤️ 製作，由 <a href="https://hexo.io">Hexo</a> 強力驅動',
+  'theme_info': '主題 🚧 <a href="https://github.com/Mitscherlich/hexo-theme-amber">Amber</a>',
 
   'facebook': 'Facebook',
   'github': 'Github',

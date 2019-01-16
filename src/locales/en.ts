@@ -47,6 +47,8 @@ export default {
   'untitled': 'Untitled',
   'visit': 'Visit',
   'you_may_want': 'You may want:',
+  'powered_by_info': 'Made by <a href="{link}">{author}</a> with ❤️  Powered by <a href="https://hexo.io">Hexo</a>',
+  'theme_info': 'Theme 🚧 <a href="https://github.com/Mitscherlich/hexo-theme-amber">Amber</a>',
 
   'facebook': 'Facebook',
   'github': 'Github',
