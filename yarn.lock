@@ -5152,7 +5152,7 @@ leancloud-realtime@^4.2.0:
     uuid "^3.0.0"
     ws "^5.2.1"
 
-leancloud-storage@^3.11.0:
+leancloud-storage@^3.11.1:
   version "3.11.1"
   resolved "http://registry.npm.taobao.org/leancloud-storage/download/leancloud-storage-3.11.1.tgz#af27874e19f934647ed9a86a8a19507bd6f649e7"
   integrity sha1-ryeHThn5NGR+2ahqihlQe9b2Sec=

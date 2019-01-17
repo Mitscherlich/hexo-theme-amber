@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-amber",
-  "version": "0.0.1-rc.4",
+  "version": "0.0.1-rc.5",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -23,7 +23,7 @@
     "github-markdown-css": "^2.10.0",
     "gitment": "^0.0.3",
     "katex": "^0.10.0",
-    "leancloud-storage": "^3.11.0",
+    "leancloud-storage": "^3.11.1",
     "lodash.merge": "^4.6.1",
     "lodash.pick": "^4.4.0",
     "markdown-it": "^8.4.2",
