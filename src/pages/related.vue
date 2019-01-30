@@ -28,7 +28,7 @@ import {
 @Component({
   name: 'Related',
 })
-export default class Related extends Vue {
+export default class RelatedPage extends Vue {
   private get format(): string {
     return this.site.format!.date_format;
   }

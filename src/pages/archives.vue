@@ -26,7 +26,7 @@ import day from 'dayjs';
   name: 'Archives',
   components: { Pagination },
 })
-export default class Archives extends Vue {
+export default class ArchivesPage extends Vue {
   private get format(): string {
     return this.site.format!.date_format;
   }

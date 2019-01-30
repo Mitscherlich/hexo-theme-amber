@@ -1,5 +1,5 @@
 import { Vue, Component } from 'vue-property-decorator';
-import { IRootState } from '@/store/index';
+import { IRootState } from '@/store';
 
 import HexoConfig from '@/models/hexo';
 import ThemeConfig from '@/models/theme';

@@ -75,9 +75,9 @@ export default class GithubCard extends Vue {
 }
 </script>
 
-<style src="@/common/stylus/partials/transition.styl" lang="stylus"></style>
+<style src="@/common/style/partials/transition.styl" lang="stylus"></style>
 <style lang="stylus">
-@import '~@/common/stylus/variables'
+@import '~@/common/style/variables'
 
 .github-card
   text-align center

@@ -15,19 +15,23 @@
             b-btn.text-muted.mb-1.mr-1(size="sm", variant="light", v-for="{ name, slug } of post.tags", :key="`tag-${slug}`", :to="{ name: 'related', query: { tag: name } }")
               fa-icon.mr-1(icon="tag")
               | {{ name }}
-      article.markdown-body(v-html="post.excerpt || post.content")
+      Content(:content="post.excerpt || post.content")
       em(slot="footer"): small
         b-link.text-muted(:to="{ name: 'article', params: { slug: post.slug }}") {{ $t('read_more') }}
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import { renderMathInElement } from '@/common/js/katex';
-import { renderDplayer } from '@/common/js/dplayer';
+import { renderMathInElement } from '@/common/script/katex';
+import { renderDplayer } from '@/common/script/dplayer';
 import Post from '@/models/post';
 import Category from '@/models/category';
+import Content from './Content.vue';
 
-@Component({ name: 'Gallery' })
+@Component({
+  name: 'Gallery',
+  components: { Content },
+})
 export default class Gallery extends Vue {
   @Prop({ type: String, default: 'll' })
   private format?: string;

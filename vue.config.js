@@ -1,13 +1,9 @@
 const path = require('path')
-const PrerenderSpaPlugin = require('prerender-spa-plugin')
-const merge = require('lodash.merge')
 
-const config = {
-  productionSourceMap: false,
-}
-
-const build = {
+module.exports = {
   outputDir: 'source',
+  productionSourceMap: false,
+  runtimeCompiler: true,
   indexPath: path.relative('source', 'layout/index.ejs'),
   devServer: {
     proxy: {
@@ -20,28 +16,54 @@ const build = {
         'target': 'http://localhost:4000/assets',
         'changeOrigin': true,
         'pathRewrite': { '^/assets': '' },
-      },
-    },
+      }
+    }
   },
-}
-
-const server = {
   configureWebpack: {
-    plugins: [
-      new PrerenderSpaPlugin(
-        path.resolve(__dirname, './dist'),
-        ['/', '/archives', '/messages', '/donate', '/projects', '/profile'], {
-          renderAfterTime: 5000,
-          maxAttempts: 10,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          bootstrap: {
+            name: 'chunk-bootstrap',
+            test: /[\\/]node_modules\/bootstrap[\\/]/,
+            chunks: 'all',
+            reuseExistingChunk: true,
+            enforce: true
+          },
+          bootstrapVue: {
+            name: 'chunk-bootstrap-vue',
+            test: /[\\/]node_modules\/bootstrap-vue[\\/]/,
+            chunks: 'all',
+            reuseExistingChunk: true,
+            enforce: true
+          },
+          fontAwesome: {
+            name: 'chunk-font-awesome',
+            test: /[\\/]node_modules\/@fortawesome[\\/]/,
+            chunks: 'all',
+            reuseExistingChunk: true,
+            enforce: true
+          },
+          markdownIt: {
+            name: 'chunk-markdown-it',
+            test: /[\\/]node_modules\/markdown-it[\\/]/,
+            chunks: 'all',
+            reuseExistingChunk: true,
+            enforce: true
+          },
+          vue: {
+            name: 'chunk-vue',
+            test: /[\\/]node_modules\/vue[\\/]/,
+            chunks: 'all',
+            reuseExistingChunk: true,
+            enforce: true
+          }
         }
-      )
-    ]
+      }
+    }
+  },
+  pwa: {
+    themeColor: '#ffffff',
+    msTileColor: '#ffffff'
   }
 }
-
-const ssr = (
-  process.env.VUE_ENV === 'server' &&
-  process.env.NODE_ENV === 'production'
-)
-
-module.exports = merge(config, ssr ? server : build)

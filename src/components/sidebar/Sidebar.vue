@@ -5,7 +5,6 @@
       Leaf(:word="leaf", v-if="shouldShowLeaf")
       Elsewhere(:where="social", v-if="shouldShowElsewhere")
       TagCloud(:tags="tags", v-if="shouldShowTagCloud")
-
       .position-sticky.mb-3(style="top: 1.25rem;")
         Github(:name="user", v-if="shouldShowGithub")
 </template>

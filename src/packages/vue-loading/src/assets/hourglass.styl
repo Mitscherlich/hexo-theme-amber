@@ -1,0 +1,51 @@
+@import "./variant"
+
+.lds-hourglass
+  display inline-block
+  position relative
+  width 64px
+  height 64px
+  &, &:after, &:before
+    background-color transparent!important
+  &:after
+    content " "
+    display block
+    border-radius 50%
+    width 0
+    height 0
+    margin 6px
+    box-sizing border-box
+    animation lds-hourglass 1.2s infinite
+  &.lds-primary:after
+    border 26px solid color-primary
+    border-color color-primary transparent color-primary transparent
+  &.lds-secondary:after
+    border 26px solid color-secondary
+    border-color color-secondary transparent color-secondary transparent
+  &.lds-success:after
+    border 26px solid color-success
+    border-color color-success transparent color-success transparent
+  &.lds-danger:after
+    border 26px solid color-danger
+    border-color color-danger transparent color-danger transparent
+  &.lds-warning:after
+    border 26px solid color-warning
+    border-color color-warning transparent color-warning transparent
+  &.lds-info:after
+    border 26px solid color-info
+    border-color color-info transparent color-info transparent
+  &.lds-light:after
+    border 26px solid color-light
+    border-color color-light transparent color-light transparent
+  &.lds-dark:after
+    border 26px solid color-dark
+    border-color color-dark transparent color-dark transparent
+  &.lds-muted:after
+    border 26px solid color-muted
+    border-color color-muted transparent color-muted transparent
+  &.lds-white:after
+    border 26px solid color-white
+    border-color color-white transparent color-white transparent
+  &.lds-black:after
+    border 26px solid color-black
+    border-color color-black transparent color-black transparent

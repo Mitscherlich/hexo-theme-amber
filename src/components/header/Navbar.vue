@@ -15,7 +15,7 @@ export default class Navbar extends Vue {
 </script>
 
 <style lang="stylus" scoped>
-@import "~@/common/stylus/variables"
+@import "~@/common/style/variables"
 
 .nav-scroller
   position relative

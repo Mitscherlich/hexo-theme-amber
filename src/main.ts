@@ -11,7 +11,7 @@ import './enhanceApp';
 
 // integrate i18n instance
 import VueI18n from 'vue-i18n';
-import { i18nOpts } from './enhancers/i18n';
+import { i18nOpts } from './plugins/i18n';
 const i18n = new VueI18n(i18nOpts);
 
 const dev = !(process.env.NODE_ENV === 'production');

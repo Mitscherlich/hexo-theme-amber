@@ -18,28 +18,27 @@
           b-btn.text-muted.mb-1.mr-1(size="sm", variant="light", v-for="{ name, slug } of context.tags", :key="`tag-${slug}`", :to="{ name: 'related', query: { tag: name } }")
             fa-icon.mr-1(icon="tag")
             | {{ name }}
-      article.markdown-body.my-4(ref="content", v-html="context.content")
+      //- article.markdown-body.my-4(ref="content", v-html="context.content")
+      Content.my-4(:content="context.content")
       Comments.mb-4(:comments="context.comments")
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
-import { CreateElement } from 'vue';
-import { mapState } from 'vuex';
-import { Route } from 'vue-router';
 import { IRootState, IContext } from '@/store';
 import { FETCH_DETAILABLE_TARGET } from '@/store/types';
-import { renderMathInElement } from '@/common/js/katex';
-import { renderDplayer } from '@/common/js/dplayer';
+import { renderMathInElement } from '@/common/script/katex';
+import { renderDplayer } from '@/common/script/dplayer';
 import Article from '@/models/article';
 import Page from '@/models/page';
 import Comments from '@/components/partials/Comments.vue';
+import Content from '@/components/partials/Content.vue';
 
 @Component({
   name: 'Article',
-  components: { Comments },
+  components: { Comments, Content },
 })
-export default class Content extends Vue {
+export default class ArticlePage extends Vue {
   private get format() {
     return this.$store.state.site.format!.date_format || 'll';
   }
@@ -78,17 +77,6 @@ export default class Content extends Vue {
       return;
     }
     document.title = `${title} | Amber`;
-    this.$nextTick(() => {
-      this.$forceUpdate();
-    });
-  }
-
-  private updated() {
-    const elContent = this.$refs.content;
-    this.$nextTick(() => {
-      renderMathInElement(elContent as HTMLElement);
-      renderDplayer(elContent as HTMLElement);
-    });
   }
 }
 </script>

@@ -1,0 +1,73 @@
+// animation: lds-default
+@keyframes lds-default
+  0%, 20%, 80%, 100%
+    transform scale(1)
+  50%
+    transform scale(1.5)
+
+// animation: lds-ellipsis
+@keyframes lds-ellipsis1
+  0%
+    transform scale(0)
+  100%
+    transform scale(1)
+
+@keyframes lds-ellipsis3
+  0%
+    transform scale(1)
+  100%
+    transform scale(0)
+
+@keyframes lds-ellipsis2
+  0%
+    transform translate(0, 0)
+  100%
+    transform translate(19px, 0)
+
+// animation: lds-grid
+@keyframes lds-grid
+  0%, 100%
+    opacity 1
+  50%
+    opacity 0.5
+
+// animation: lds-heart
+@keyframes lds-heart
+  0%
+    transform scale(0.95)
+  5%
+    transform scale(1.1)
+  39%
+    transform scale(0.85)
+  45%
+    transform scale(1)
+  60%
+    transform scale(0.95)
+  100%
+    transform scale(0.9)
+
+// animation: lds-hourglass
+@keyframes lds-hourglass
+  0%
+    transform rotate(0)
+    animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  50%
+    transform rotate(900deg)
+    animation-timing-function cubic-bezier(0.215, 0.61, 0.355, 1)
+  100%
+    transform rotate(1800deg)
+
+// animation: lds-ripple
+@keyframes lds-ripple
+  0%
+    top 28px
+    left 28px
+    width 0
+    height 0
+    opacity 1
+  100%
+    top -1px
+    left -1px
+    width 58px
+    height 58px
+    opacity 0

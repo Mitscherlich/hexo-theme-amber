@@ -5,10 +5,9 @@ export const i18nOpts = {
   locale: 'en',
   fallbackLocale: 'en',
   messages: {
-    en: require('@/locales/en').default,
-    jp: require('@/locales/jp').default,
-    cn: require('@/locales/cn').default,
-    tw: require('@/locales/tw').default,
+    'en': require('@/locales/en.json'),
+    'zh-CN': require('@/locales/zh-CN.json'),
+    'zh-TW': require('@/locales/zh-TW.json'),
   },
 };
 

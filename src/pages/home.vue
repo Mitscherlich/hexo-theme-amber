@@ -22,7 +22,7 @@ import Pagination from '@/components/partials/Pagination.vue';
   name: 'Home',
   components: { Gallery, Pagination },
 })
-export default class Home extends Vue {
+export default class HomePage extends Vue {
   private get format() {
     return this.site.format!.date_format;
   }

@@ -1,16 +1,12 @@
 <template lang="pug">
   #blog-app
     Header#blog-header
-
     main#blog-body
-      b-container.blog-main
-        b-row
-          b-col(lg=8)
-            transition(name="fade", mode="out-in")
-              keep-alive
-                router-view
-          Sidebar#blog-sidebar.col-lg-4
-
+      b-container.blog-main: b-row
+        b-col(:lg="shouldShowSidebar?8:12"): transition(name="fade", mode="out-in")
+          keep-alive
+            router-view
+        Sidebar#blog-sidebar.col-lg-4(v-if="shouldShowSidebar")
     Footer#blog-footer
 </template>
 
@@ -26,7 +22,11 @@ import Sidebar from '@/components/sidebar/Sidebar.vue';
   components: { Header, Footer, Sidebar },
 })
 export default class Default extends Vue {
-  private beforeUpdate() {
+  private get shouldShowSidebar() {
+    return this.$route.meta.sidebar !== false;
+  }
+
+  private mounted() {
     if (!document) {
       return; // ignore this when ssr
     }
@@ -39,9 +39,7 @@ export default class Default extends Vue {
 
 <style src="bootstrap/dist/css/bootstrap.min.css"></style>
 <style src="bootstrap-vue/dist/bootstrap-vue.min.css"></style>
-<style src="dplayer/dist/DPlayer.min.css"></style>
-<style src="katex/dist/katex.min.css"></style>
-<style lang="stylus" src="@/common/stylus/style.styl"></style>
+<style lang="stylus" src="@/common/style/style.styl"></style>
 <style lang="stylus" scoped>
 #blog-sidebar
   position relative
