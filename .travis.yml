@@ -16,6 +16,7 @@ script:
 
 after_success:
   - mkdir dist
+  - cp -R docs dist/docs
   - cp -R layout dist/layout
   - cp -R source dist/source
   - cp -R scripts dist/scripts
