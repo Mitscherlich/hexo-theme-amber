@@ -2,7 +2,7 @@
   b-row.mb-2.d-none.d-md-flex.d-lg-flex: b-col(md=6, v-for="(t, i) of topic", :key="`tag-${i}`")
     b-card.flex-md-row.mb-4.h-md-250(no-body): transition(name="fade", mode="out-in")
       .overlay(v-if="!ready"): loading(type="ellipsis", variant="muted")
-      b-card-body.d-flex.flex-column.align-items-start(v-else)
+      b-card-body.topic-box(v-else)
         strong.d-inline-block.text-capitalize(:class="[ `text-${ i % 2 ? 'success' : 'primary' }` ]") {{ t }}
         h3.topic-title: b-link.text-dark(:to="{ name: 'article', params: { slug: tree[t].slug } }") {{ tree[t].title }}
         .mb-1.text-muted {{ tree[t].date | date('MMM DD') }}
@@ -33,10 +33,10 @@ export default class Topic extends Vue {
     const posts = (await Promise.all(this.topic!.map(async (_) => {
       const { data } = await fetchPostsByCategory(_);
       return data.posts[0];
-    }))).flat();
+    })) as any).flat();
     const res: ITopicTree = {};
     for (const t of this.topic!) {
-      res[ t ] = posts.find((_) => {
+      res[ t ] = posts.find((_: any) => {
         for (const c of _.categories) {
           if (c.slug !== t) {
             continue;
@@ -64,11 +64,15 @@ export default class Topic extends Vue {
   height 100%
   center()
 
-.topic-title
-  margin-bottom 0
+.topic-box
   display flex
-  & > *
-    white-space nowrap
-    overflow hidden
-    text-overflow ellipsis
+  flex-direction column
+  align-items start
+  overflow scroll
+  .topic-title
+    margin-bottom 0
+    & > a
+      white-space nowrap
+      overflow hidden
+      text-overflow ellipsis
 </style>

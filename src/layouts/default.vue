@@ -21,7 +21,7 @@ import Sidebar from '@/components/sidebar/Sidebar.vue';
   name: 'Default',
   components: { Header, Footer, Sidebar },
 })
-export default class Default extends Vue {
+export default class DefaultLayout extends Vue {
   private get shouldShowSidebar() {
     return this.$route.meta.sidebar !== false;
   }
@@ -41,6 +41,8 @@ export default class Default extends Vue {
 <style src="bootstrap-vue/dist/bootstrap-vue.min.css"></style>
 <style lang="stylus" src="@/common/style/style.styl"></style>
 <style lang="stylus" scoped>
+#blog-app
+  overflow-x hidden
 #blog-sidebar
   position relative
 </style>

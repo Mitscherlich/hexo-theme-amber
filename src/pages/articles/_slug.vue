@@ -82,3 +82,7 @@ export default class ArticlePage extends Vue {
 </script>
 
 <style src="github-markdown-css/github-markdown.css"></style>
+<style lang="stylus" scoped>
+.blog-article
+  overflow hidden
+</style>

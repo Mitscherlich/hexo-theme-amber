@@ -1,24 +1,33 @@
 const path = require('path')
+const merge = require('lodash.merge')
 
-module.exports = {
+const isDev = !(process.env.NODE_ENV === 'production');
+
+const config = {
   outputDir: 'source',
   productionSourceMap: false,
-  runtimeCompiler: true,
-  indexPath: path.relative('source', 'layout/index.ejs'),
-  devServer: {
-    proxy: {
-      '/api': {
-        'target': 'http://localhost:4000/api',
-        'changeOrigin': true,
-        'pathRewrite': { '^/api': '' },
-      },
-      '/assets': {
-        'target': 'http://localhost:4000/assets',
-        'changeOrigin': true,
-        'pathRewrite': { '^/assets': '' },
-      }
-    }
+  indexPath: path.relative('source', 'layout/index.ejs')
+}
+
+const proxy = {
+  '/api': {
+    'target': 'http://localhost:4000/api',
+    'changeOrigin': true,
+    'pathRewrite': { '^/api': '' },
   },
+  '/assets': {
+    'target': 'http://localhost:4000/assets',
+    'changeOrigin': true,
+    'pathRewrite': { '^/assets': '' },
+  }
+}
+
+const dev = {
+  devServer: { proxy }
+}
+
+const prod = {
+  pwa: { themeColor: '#ffffff', msTileColor: '#ffffff' },
   configureWebpack: {
     optimization: {
       splitChunks: {
@@ -61,9 +70,7 @@ module.exports = {
         }
       }
     }
-  },
-  pwa: {
-    themeColor: '#ffffff',
-    msTileColor: '#ffffff'
   }
 }
+
+module.exports = merge(config, isDev ? dev: prod)

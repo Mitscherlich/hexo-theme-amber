@@ -10,6 +10,17 @@ menu:
   #   [O]  About: /about/index  (directory based)
   #   [O]  About: /about        (single .md file)
 
+# Slider
+slider: 10 # unit: seconds. `true` or number for enable and `false` for disable
+
+# Topic
+topic:  # tag array for enable and `false` for disable
+# example:
+#   [0] - essay
+#       - note
+#   [x] - false
+#   [x] true
+
 ## RSS Feed
 ## docs: https://github.com/hexojs/hexo-generator-feed
 rss:

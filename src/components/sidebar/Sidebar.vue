@@ -1,11 +1,11 @@
 <template lang="pug">
   transition(name="fade")
-    aside.blog-sidebar.mb-3(v-if="ready")
+    aside.mb-3(v-if="ready")
       //- ads placeholder
       Leaf(:word="leaf", v-if="shouldShowLeaf")
       Elsewhere(:where="social", v-if="shouldShowElsewhere")
       TagCloud(:tags="tags", v-if="shouldShowTagCloud")
-      .position-sticky.mb-3(style="top: 1.25rem;")
+      .position-sticky
         Github(:name="user", v-if="shouldShowGithub")
 </template>
 
@@ -79,3 +79,9 @@ export default class Sidebar extends Vue {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.position-sticky
+  margin-bottom 1rem
+  top 1.25rem
+</style>
