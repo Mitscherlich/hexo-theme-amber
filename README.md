@@ -1,3 +1,6 @@
+> **🔊:** MAINTAINER NEEDED<br />
+> Currently, I'm not focusing on this project anymore. Since it a little bit out of date and Vue.js 3 is coming soon next year, if you're also interested in this theme, please [contact me](mailto:mitscherlich36@gmail.com) and I'll transfer this repo to you.
+
 # hexo-theme-amber
 
 [![Build Status][ci-badge]][ci-url]
