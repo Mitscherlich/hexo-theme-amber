@@ -25,10 +25,14 @@ Hexo 博客主题 for [mitscherlich.me](https://mitscherlich.me).
 
 ## 安装
 
-通过本仓库:
+通过 `npm`/`yarn`/`pnpm`:
 
 ```bash
-$ git clone https://github.com/Mitscherlich/hexo-theme-amber.git themes/amber
+$ npm i --save hexo-theme-amber
+# or yarn
+$ yarn add hexo-theme-amber
+# or pnpm
+$ pnpm add hexo-theme-amber
 ```
 
 接着修改你博客的 `_config.yml`:

@@ -23,10 +23,14 @@ Language: :us:<a title="Chinese" href="README.zh-CN.md">:cn:</a>
 
 ## Install
 
-via this repo:
+via npm/yarn/pnpm:
 
 ```bash
-$ git clone https://github.com/Mitscherlich/hexo-theme-amber.git themes/amber
+$ npm i --save hexo-theme-amber
+# or yarn
+$ yarn add hexo-theme-amber
+# or pnpm
+$ pnpm add hexo-theme-amber
 ```
 
 Then modify you `_config.yml`:
