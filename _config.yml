@@ -1,0 +1,92 @@
+# Basic config
+## Menu
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /related?tag=all
+  Categories: /related?category=all
+  # Custom Menu
+  # example:
+  #   [O]  About: /about/index  (directory based)
+  #   [O]  About: /about        (single .md file)
+
+# Slider
+slider: 10 # unit: seconds. `true` or number for enable and `false` for disable
+
+# Topic
+topic:  # tag array for enable and `false` for disable
+# example:
+#   [0] - essay
+#       - note
+#   [x] - false
+#   [x] true
+
+## RSS Feed
+## docs: https://github.com/hexojs/hexo-generator-feed
+rss:
+  enable: false
+  # path: # path to atom.xml or rss.xml
+
+## Social links
+social:
+  # facebook: ...
+  # github: ...
+  # twitter: ...
+  # weibo: ...
+  websites:
+    # - text: ...
+    #   link: ...
+
+## Sidebar
+sidebar:
+  leaf: To descript your blog. *Markdown* supported.
+  github: Mitscherlich
+
+## comments
+### gitalk docs: https://github.com/gitalk/gitalk
+### gitment docs: https://github.com/imsun/gitment
+### valine docs: https://github.com/xCss/Valine
+comments:
+  enable: true
+  engine: gitalk  # NOTE: you can ONLY use ONE comment system!
+  gitalk:
+    # required: github application client id
+    clientID: process.env.clientId
+    # required: github application client secret
+    clientSecret: process.env.clientSecret
+    repo: process.env.repo    # required: github repo
+    owner: process.env.author # required: github repo owner
+    admin:
+      - process.env.author  # required: gitHub repo owner and collaborators
+                            # only these guys can initialize github issues
+  gitment:
+    repo: process.env.repo    # required: github repo
+    owner: process.env.author # required: github repo owner
+    oauth:
+      # required: github application client id
+      client_id: process.env.clientId
+      # required: github application client secret
+      client_secret: process.env.clientSecret
+  valine:
+    # required: leancloud app id
+    appId: process.env.appId
+    # required: leancloud app key
+    appKey: process.env.appKey
+
+## Build-in Search
+## NOTE: DONNT USE NOW!!! -- TOO BUGGY
+# search:
+#   enable: false
+#   engine: build-in  # only support build-in currently
+#   max: 5            # the number of suggestions
+
+## powered by information
+powered_by:
+  author: Mitscherlich
+  link: https://github.com/Mitscherlich
+
+# External
+## Google Analytics
+google_analytics:
+  enable: false
+  track_id:  # replace to your track_id. It starts with 'UA-'.

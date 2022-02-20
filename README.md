@@ -1,0 +1,3 @@
+# hexo-theme-amber
+
+> TODO
