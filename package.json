@@ -30,7 +30,7 @@
     "nprogress": "^0.2.0",
     "register-service-worker": "^1.5.2",
     "store": "^2.0.12",
-    "valine": "^1.4.15",
+    "valine": "^1.5.0",
     "vue": "^2.5.17",
     "vue-analytics": "^5.16.1",
     "vue-class-component": "^6.0.0",
